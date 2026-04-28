@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-# 🌐 Priyanshu Gaurav – Portfolio
+# 🌐 Piyush Kumar – Portfolio
 
 This is my personal portfolio website built with **React + Vite + Tailwind CSS** and deployed on **GitHub Pages**.  
-It showcases my projects, blogs, and experiments in building cool stuff.
+It showcases my projects, and experiments in building cool stuff.
 =======
 # SELECT * FROM portfolio WHERE developer = 'Piyush Kumar';
 
