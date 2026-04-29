@@ -10,6 +10,7 @@ import About from './components/About'
 import Stack from './components/Stack'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
+import FooterName from './components/FooterName'
 import StatsBridge from './components/StatsBridge'
 import DinoGame from './components/DinoGame'
 import ProjectDetails from "./components/ProjectDetails";
@@ -66,6 +67,7 @@ const App = () => {
                     <StatsBridge />
                     <DinoGame />
                     <Footer />
+                    <FooterName />
                   </>
                 }
               />
@@ -83,6 +85,7 @@ const App = () => {
                     <StatsBridge />
                     <DinoGame />
                     <Footer />
+                    <FooterName />
                   </>
                 }
               />
