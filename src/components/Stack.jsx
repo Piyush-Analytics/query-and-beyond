@@ -55,6 +55,26 @@ const Stack = () => {
     return names[str] || str.charAt(0).toUpperCase() + str.slice(1);
   };
 
+  const getOfficialUrl = (name) => {
+  const urls = {
+    python: "https://www.python.org",
+    mysql: "https://www.mysql.com",
+    postgresql: "https://www.postgresql.org",
+    matplotlib: "https://matplotlib.org",
+    jupyter: "https://jupyter.org",
+    html5: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    css3: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    javascript: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    git: "https://git-scm.com",
+    github: "https://github.com",
+    figma: "https://www.figma.com",
+    microsoftsqlserver: "https://www.microsoft.com/en-us/sql-server",
+    vscode: "https://code.visualstudio.com",
+    linux: "https://www.linux.org",
+  };
+  return urls[name] || "#";
+};
+
   const Tooltip = ({ name }) => (
     <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1 text-xs font-semibold rounded-md border bg-[var(--bg-color)] text-[var(--text-color)] border-[var(--border-color)] shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50">
       {formatName(name)}
@@ -62,11 +82,17 @@ const Stack = () => {
   );
 
   const IconWithTooltip = ({ name }) => (
-    <div className="relative group flex flex-col items-center cursor-pointer p-2">
-      <Tooltip name={name} />
-      <img src={getIconUrl(name)} alt={`${name} icon`} className={getIconClass(name)} onError={(e) => { e.target.style.display='none'; }} />
-    </div>
-  );
+    <a
+    href={getOfficialUrl(name)}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative group flex flex-col items-center p-2"
+    title={formatName(name)}
+  >
+    <Tooltip name={name} />
+    <img src={getIconUrl(name)} alt={`${name} icon`} className={getIconClass(name)} onError={(e) => { e.target.style.display='none'; }} />
+  </a>
+);
 
   return (
     <div className="border-b-2 w-full flex flex-col transition-colors duration-400" style={{ borderColor: "var(--border-color)" }}>
