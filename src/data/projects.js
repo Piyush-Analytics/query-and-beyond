@@ -1,3 +1,4 @@
+// updated by piyush
 export const projects = [
   {
     id: "strayniya-website",
