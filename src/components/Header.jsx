@@ -2,6 +2,8 @@ import { Github, Sun, Moon, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { createPortal } from "react-dom";
+import { useSound } from "../hooks/useSound";
+import { clickSound } from "../lib/clickSound";
 
 const Header = ({ showLogoVideo }) => {
   const [darkMode, setDarkMode] = useState(() => {
@@ -10,6 +12,7 @@ const Header = ({ showLogoVideo }) => {
     return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
   });
   const [menuOpen, setMenuOpen] = useState(false);
+  const [playSound] = useSound(clickSound, { volume: 0.5 });
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -23,6 +26,7 @@ const Header = ({ showLogoVideo }) => {
   }, [darkMode]);
 
   const toggleTheme = () => {
+    playSound();
     const newTheme = !darkMode;
     setDarkMode(newTheme);
     localStorage.setItem("theme", newTheme ? "dark" : "light");
@@ -41,9 +45,7 @@ const Header = ({ showLogoVideo }) => {
         >
           <div className="flex items-center pl-5">
             {showLogoVideo && (
-              <video muted playsInline autoPlay loop className="h-10 w-10 rounded-full overflow-hidden">
-                <source src="logo.mp4" type="video/mp4" />
-              </video>
+              <img src="logo.gif" alt="logo" className="h-10 w-10 rounded-full overflow-hidden object-cover" />
             )}
           </div>
           <div className="flex items-center gap-6">
@@ -51,6 +53,7 @@ const Header = ({ showLogoVideo }) => {
             <Link to="/projects" className="hover:text-blue-500 transition">Projects</Link>
             <a href="https://github.com/Piyush-Analytics" target="_blank" rel="noopener noreferrer">
               <button
+               onClick={playSound} 
                 style={{ backgroundColor: "var(--bg-color)", border: `1px solid var(--border-color)` }}
                 className="p-2 rounded-full hover:opacity-80 transition-colors duration-300"
               >
@@ -74,9 +77,7 @@ const Header = ({ showLogoVideo }) => {
         >
           <div className="flex items-center">
             {showLogoVideo && (
-              <video muted playsInline autoPlay loop className="h-10 w-10 rounded-full overflow-hidden">
-                <source src="logo.mp4" type="video/mp4" />
-              </video>
+              <img src="logo.gif" alt="logo" className="h-10 w-10 rounded-full overflow-hidden object-cover" />
             )}
           </div>
           <button onClick={() => setMenuOpen(true)}>

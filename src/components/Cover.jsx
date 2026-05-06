@@ -4,8 +4,8 @@ import Matter from "matter-js";
 const { Engine, Render, Runner, Bodies, Body, Events, Mouse, MouseConstraint, Composite } = Matter;
 
 const SKILLS = [
-  "C++", "Rust", "JavaScript", "TypeScript", "Python",
-  "React", "Next.js", "Node.js", "Bun", "Fastify",
+  "Python", "MySQL", "PostgreSQL", "Matplotlib", "Jupyter",
+  "HTML5", "CSS3", "JavaScript", "Git", "Figma",
 ];
 
 const getPillSize = (label) => ({
@@ -224,10 +224,8 @@ const Cover = ({ setShowLogoVideo }) => {
           mx-[4%] sm:mx-[10%] md:mx-[15%] lg:mx-[19.5%]
           max-h-[20vh] sm:min-h-[30vh] md:min-h-[40vh] lg:min-h-[34vh]"
       >
-        {/* Video */}
-        <video ref={videoRef} muted playsInline autoPlay loop className="pt-17">
-          <source src="cover.mp4" type="video/mp4" />
-        </video>
+        {/* GIF */}
+       <img src="logo.gif" alt="cover" className="pt-17 max-h-full object-contain" />
 
         {/* Dot overlay */}
         <div

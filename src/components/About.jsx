@@ -28,7 +28,7 @@ const About = () => {
           </p>
 
           <p className="mb-4">
-            <br />Peace Out ✌️
+            <br />🗄️ Data Never Lies. 📉
           </p>
         </div>
       </div>

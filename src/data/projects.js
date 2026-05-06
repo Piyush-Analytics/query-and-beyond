@@ -66,6 +66,32 @@ export const projects = [
     ],
   },
   {
+    id: "superstore-sales-dashboard",
+    title: "Superstore Sales Dashboard (Power BI)",
+    description: "Interactive Power BI dashboard analysing 10K+ sales orders across 4 regions and 3 years using DAX measures, Power Query, and cross-filtering slicers.",
+    image: "https://i.imgur.com/Uz8qNC7.png",
+    link: "https://github.com/Piyush-Analytics/superstore-sales-dashboard",
+    tech: ["Power BI", "DAX", "Power Query", "Data Visualization"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built an end-to-end interactive sales dashboard in Power BI analysing the US Superstore dataset (9,994 orders, 2014–2017). Includes data cleaning in Power Query, 7 custom DAX measures, and 6 interactive charts with cross-filtering slicers."
+      },
+      {
+        heading: "Key Insights",
+        content: "• West region drives highest revenue but has the lowest profit margin\n• Orders with 20%+ discount consistently generate negative profit\n• Technology is the top revenue category at ~$836K total sales\n• Tables sub-category is the only product line with consistent losses\n• Consumer segment accounts for the largest share of total orders"
+      },
+      {
+        heading: "Features",
+        content: "• 6 interactive charts — line, bar, treemap, scatter, horizontal bar\n• 3 slicers — filter by Year, Region, and Customer Segment\n• 4 KPI cards — Total Sales, Total Profit, Profit Margin %, Total Orders\n• 7 custom DAX measures including YoY Growth % and Profit Margin %\n• Cross-filtering — clicking any chart filters all other visuals"
+      },
+      {
+        heading: "Technologies Used",
+        content: "Power BI Desktop, DAX, Power Query, Microsoft Excel"
+      }
+    ],
+  },
+  {
     id: "hospital-sql-analysis",
     title: "Hospital Data Analysis (SQL)",
     description: "30-Day SQL Micro Course project analyzing real-world hospital data using advanced SQL queries.",

@@ -1,8 +1,9 @@
 import React from 'react';
+import { AvatarElectricEffect } from "../components/AvatarElectricEffect";
 
 const Profile = () => {
   return (
-    <div>
+    <div style={{ overflow: 'hidden' }}>
       <div style={{ borderColor: 'var(--border-color)' }} className="border-b">
         <div
           style={{ borderColor: 'var(--border-color)' }}
@@ -10,14 +11,16 @@ const Profile = () => {
         >
           <div
             style={{ borderColor: 'var(--border-color)' }}
-            className="border-r relative flex items-center justify-center pt-2 w-[36%] sm:w-auto sm:min-w-46 sm:max-w-46 sm:min-h-46 sm:max-h-46 overflow-hidden"
+            className="border-r relative flex items-center justify-center pt-2 w-[36%] sm:w-auto sm:min-w-46 sm:max-w-46 sm:min-h-46 sm:max-h-46"
           >
-            <img
-              src="https://i.pinimg.com/736x/bb/77/72/bb7772074ede4af7dd24a843856c691a.jpg"
-              alt="profile"
-              style={{ borderColor: 'var(--border-color)' }}
-              className="rounded-full border-2 p-1 w-full aspect-square object-cover sm:h-46 sm:min-w-46 overflow-hidden"
-            />
+            <AvatarElectricEffect>
+              <img
+                src="https://i.pinimg.com/736x/bb/77/72/bb7772074ede4af7dd24a843856c691a.jpg"
+                alt="profile"
+                style={{ borderColor: 'var(--border-color)' }}
+                className="rounded-full border-2 p-1 w-full aspect-square object-cover sm:h-46 sm:min-w-46"
+              />
+            </AvatarElectricEffect>
           </div>
 
           <div className="w-[64%] sm:w-auto sm:flex-1 flex flex-col justify-end align-bottom">
