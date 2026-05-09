@@ -93,6 +93,54 @@ export const projects = [
     ],
   },
   {
+    id: "covid19-powerbi-dashboard",
+    title: "COVID-19 Data Analysis Dashboard (Power BI)",
+    description: "An interactive 5-page Power BI dashboard analyzing 1M+ COVID-19 patient records — covering mortality, ICU admissions, comorbidities and demographics.",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/COVID19-PowerBI-Dashboard/main/covid_dashboard_portfolio.png",
+    link: "https://github.com/Piyush-Analytics/COVID19-PowerBI-Dashboard",
+    tech: ["Power BI", "DAX", "Power Query", "Data Analysis",],
+    gallery: [
+      "https://raw.githubusercontent.com/Piyush-Analytics/COVID19-PowerBI-Dashboard/main/02_demographics.png",
+      "https://raw.githubusercontent.com/Piyush-Analytics/COVID19-PowerBI-Dashboard/main/03_severity_icu.png",
+      "https://raw.githubusercontent.com/Piyush-Analytics/COVID19-PowerBI-Dashboard/main/04_comorbidities.png",
+      "https://raw.githubusercontent.com/Piyush-Analytics/COVID19-PowerBI-Dashboard/main/05_mortality_deep_dive.png",
+    ],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built an interactive 5-page Power BI dashboard from a 1,048,575-row COVID-19 patient dataset. Translated a complete Python EDA (Pandas, Matplotlib, Seaborn) into live filterable visuals with DAX measures, slicers, and cross-page navigation."
+      },
+      {
+        heading: "Page 1 — Executive Summary",
+        content: "• 6 KPI cards: Total Patients (1M), COVID Positive (392K), COVID Positive % (37.4%), Total Deaths (77K), Mortality Rate % (7.3%), ICU Rate % (1.6%)\n• COVID Positive vs Negative donut — 62.62% Negative vs 37.38% Positive\n• Patient Survival vs Mortality donut — 92.66% Survived vs 7.34% Died\n• Cases by Age Group bar chart — 30-44 age group had the highest cases"
+      },
+      {
+        heading: "Page 2 — Demographics",
+        content: "• Age Distribution column chart — peak in 30-44 Adult age group\n• Gender Distribution donut — near equal split (Female 49.93% / Male 50.07%)\n• Age Group vs Patient Outcome — elderly groups show higher mortality\n• Gender vs Patient Outcome — both genders analyzed for survival vs death trends"
+      },
+      {
+        heading: "Page 3 — Severity & ICU",
+        content: "• ICU Admission Rate — only 1.6% of 1M patients required ICU\n• Age Distribution by ICU Admission box plot — older patients more likely to need ICU\n• Pneumonia vs ICU Admission — pneumonia patients 10x more likely to need ICU"
+      },
+      {
+        heading: "Page 4 — Comorbidities",
+        content: "• Diabetes vs Patient Outcome — diabetic patients show significantly higher mortality\n• Pneumonia vs Patient Outcome — 15K died vs 5K survived among pneumonia patients\n• Conditions vs Outcome Heatmap matrix with red/green conditional color formatting\n• Obesity vs Patient Outcome — obese patients show elevated death rates"
+      },
+      {
+        heading: "Page 5 — Mortality Deep Dive",
+        content: "• Mortality by Age Group — elderly 75+ highest: Male 8.7K / Female 6.1K deaths\n• Deaths by Gender — Male 8.7K vs Female 6.1K total deaths\n• Diabetes vs Deaths — Male 5.9K / Female 3.6K deaths among diabetic patients\n• Pneumonia vs Deaths — Male 6.0K / Female 4.2K deaths among pneumonia patients"
+      },
+      {
+        heading: "Key Insights",
+        content: "• Elderly patients (75+) showed significantly higher mortality rates\n• Pneumonia was strongly associated with ICU admission\n• Diabetes and obesity correlated with worse patient outcomes\n• Only 1.6% of 1M patients required ICU admission\n• Middle-age groups (30-44) had the highest case counts\n• Near equal gender distribution — 49.93% Female vs 50.07% Male"
+      },
+      {
+        heading: "Technologies Used",
+        content: "Power BI Desktop, DAX, Power Query (M Language), Python (Pandas, Matplotlib, Seaborn)"
+      }
+    ],
+  },
+  {
     id: "hospital-sql-analysis",
     title: "Hospital Data Analysis (SQL)",
     description: "30-Day SQL Micro Course project analyzing real-world hospital data using advanced SQL queries.",
