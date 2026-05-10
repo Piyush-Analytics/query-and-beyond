@@ -98,7 +98,7 @@ export const projects = [
     description: "An interactive 5-page Power BI dashboard analyzing 1M+ COVID-19 patient records — covering mortality, ICU admissions, comorbidities and demographics.",
     image: "https://raw.githubusercontent.com/Piyush-Analytics/COVID19-PowerBI-Dashboard/main/covid_dashboard_portfolio.png",
     link: "https://github.com/Piyush-Analytics/COVID19-PowerBI-Dashboard",
-    tech: ["Power BI", "DAX", "Power Query", "Data Analysis",],
+    tech: ["Power BI", "DAX", "Power Query", "Data Analysis"],
     gallery: [
       "https://raw.githubusercontent.com/Piyush-Analytics/COVID19-PowerBI-Dashboard/main/02_demographics.png",
       "https://raw.githubusercontent.com/Piyush-Analytics/COVID19-PowerBI-Dashboard/main/03_severity_icu.png",
@@ -137,6 +137,36 @@ export const projects = [
       {
         heading: "Technologies Used",
         content: "Power BI Desktop, DAX, Power Query (M Language), Python (Pandas, Matplotlib, Seaborn)"
+      }
+    ],
+  },
+  {
+    id: "hr-analytics-eda",
+    title: "HR Analytics — Employee Attrition EDA (Python)",
+    description: "Exploratory Data Analysis on IBM HR dataset of 1,470 employees using Python — uncovering key attrition drivers, workforce diversity patterns, and salary insights across 11 charts built with Pandas, Matplotlib and Seaborn.",
+    image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&auto=format&fit=crop&q=60",
+    link: "https://github.com/Piyush-Analytics/HR-analytics-eda",
+    tech: ["Python", "Pandas", "Seaborn", "Matplotlib", "EDA", "Data Visualization"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Performed a full Exploratory Data Analysis on the IBM HR Analytics Employee Attrition dataset containing 1,470 employee records and 35 features. Engineered 4 new features including Age Groups, Salary Bands and Tenure Groups, then built 11 visualisations covering attrition overview, department analysis, salary distribution, overtime impact, job satisfaction, work-life balance, gender diversity and a correlation heatmap."
+      },
+      {
+        heading: "Key Insights",
+        content: "• Overall attrition rate: 16.1% — 237 out of 1,470 employees left\n• Overtime is the #1 risk factor — overtime workers leave at 30.5% vs 10.4% (no overtime)\n• Sales department has the highest attrition rate among all departments\n• 18–25 age group has the highest attrition — early career employees leave most\n• Low salary band employees have critically high attrition rates\n• Employees with 0–2 years tenure are at highest risk of leaving"
+      },
+      {
+        heading: "Features",
+        content: "• 11 charts — bar, pie, box plot, heatmap, horizontal bar\n• 4 engineered features — Age Groups, Salary Bands, Tenure Groups, Attrition Flag\n• Correlation heatmap across 10 key HR metrics\n• Gender diversity analysis — distribution and attrition by gender\n• Key Insights summary printed programmatically from data"
+      },
+      {
+        heading: "Business Recommendations",
+        content: "• Reduce overtime — mandatory OT is the single biggest attrition driver\n• Focus retention on 18–25 age group with mentorship & career growth programs\n• Review Sales department compensation — highest attrition needs urgent attention\n• Improve onboarding — 0–2 year employees leave most, invest in early engagement\n• Salary benchmarking — low salary band has critical attrition levels"
+      },
+      {
+        heading: "Technologies Used",
+        content: "Python 3.13, Pandas, NumPy, Matplotlib, Seaborn, VS Code, Jupyter Notebook"
       }
     ],
   },
