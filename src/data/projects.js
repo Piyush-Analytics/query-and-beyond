@@ -144,7 +144,7 @@ export const projects = [
     id: "hr-analytics-eda",
     title: "HR Analytics — Employee Attrition EDA (Python)",
     description: "Exploratory Data Analysis on IBM HR dataset of 1,470 employees using Python — uncovering key attrition drivers, workforce diversity patterns, and salary insights across 11 charts built with Pandas, Matplotlib and Seaborn.",
-    image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&auto=format&fit=crop&q=60",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/HR-analytics-eda/main/HR_Analytics_Dashboard_Summary.png",
     link: "https://github.com/Piyush-Analytics/HR-analytics-eda",
     tech: ["Python", "Pandas", "Seaborn", "Matplotlib", "EDA", "Data Visualization"],
     details: [
