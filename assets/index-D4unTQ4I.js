@@ -63,7 +63,7 @@ Please change the parent <Route path="${M}"> to <Route path="${M==="/"?"*":`${M}
         top: 100vh;
         font-family: monospace;
         font-size: ${10+Math.random()*10}px;
-        color: ${Math.random()>.7?"rgba(100,150,255,0.15)":"rgba(255,255,255,0.07)"};
+        color: ${Math.random()>.7?"rgba(100,150,255,0.45)":"rgba(255,255,255,0.25)"};
         pointer-events: none;
         z-index: 0;
         animation: floatUp ${10+Math.random()*15}s linear forwards;
