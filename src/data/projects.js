@@ -146,7 +146,7 @@ export const projects = [
     description: "Exploratory Data Analysis on IBM HR dataset of 1,470 employees using Python — uncovering key attrition drivers, workforce diversity patterns, and salary insights across 11 charts built with Pandas, Matplotlib and Seaborn.",
     image: "https://raw.githubusercontent.com/Piyush-Analytics/HR-analytics-eda/main/HR_Analytics_Dashboard_Summary.png",
     link: "https://github.com/Piyush-Analytics/HR-analytics-eda",
-    tech: ["Python", "Pandas", "Seaborn", "Matplotlib", "EDA", "Data Visualization"],
+    tech: ["Python", "Pandas", "Seaborn", "Matplotlib", "EDA"],
     details: [
       {
         heading: "Overview",
@@ -167,6 +167,40 @@ export const projects = [
       {
         heading: "Technologies Used",
         content: "Python 3.13, Pandas, NumPy, Matplotlib, Seaborn, VS Code, Jupyter Notebook"
+      }
+    ],
+  },
+  {
+    id: "hr-analytics-powerbi",
+    title: "HR Analytics Dashboard (Power BI)",
+    description: "Interactive Power BI dashboard analysing IBM HR Employee Attrition dataset — 1,470 employees, 5 KPI cards, 6 charts and 3 slicers covering attrition, department, overtime, tenure and gender diversity using DAX measures.",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/HR-Analytics-PowerBI/main/HR_Analytics_PowerBI_Dashboard.png",
+    link: "https://github.com/Piyush-Analytics/HR-Analytics-PowerBI",
+    tech: ["Power BI", "DAX", "Power Query", "Data Visualization"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built an interactive Power BI dashboard analysing the IBM HR Analytics Employee Attrition dataset (1,470 employees, 35 features). Features 5 KPI cards, 6 interactive charts and 3 slicers with full cross-filtering capability — covering attrition by department, age group, job role, overtime impact, tenure and gender diversity."
+      },
+      {
+        heading: "Key Metrics",
+        content: "• Total Employees: 1,470\n• Attrition Count: 237\n• Attrition Rate: 16.1%\n• Avg Monthly Income: $6,503\n• Avg Tenure: 7.01 years"
+      },
+      {
+        heading: "Key Insights",
+        content: "• Overtime workers leave at 30.5% vs 10.4% — 3x higher risk\n• Sales department has highest attrition (92 employees left)\n• Laboratory Technicians are the most at-risk job role (62 left)\n• 60% Male vs 40% Female workforce split\n• Employees with 0–2 years tenure leave most frequently"
+      },
+      {
+        heading: "Features",
+        content: "• 5 KPI cards — Total Employees, Attrition Count, Attrition Rate %, Avg Income, Avg Tenure\n• 6 interactive charts — bar, column, donut, horizontal bar\n• 3 slicers — Department, Gender, Job Role\n• Cross-filtering — clicking any chart filters all other visuals\n• Custom icons on KPI cards for professional look"
+      },
+      {
+        heading: "DAX Measures",
+        content: "• Total Employees = COUNTROWS(table)\n• Attrition Count = CALCULATE(COUNTROWS, Attrition = Yes)\n• Attrition Rate % = DIVIDE([Attrition Count], [Total Employees])\n• Avg Monthly Income = AVERAGE(MonthlyIncome)\n• Avg Tenure = AVERAGE(YearsAtCompany)"
+      },
+      {
+        heading: "Technologies Used",
+        content: "Power BI Desktop, DAX, Power Query"
       }
     ],
   },
