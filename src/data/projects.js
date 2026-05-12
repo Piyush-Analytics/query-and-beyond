@@ -205,6 +205,36 @@ export const projects = [
     ],
   },
   {
+    id: "stock-market-pipeline",
+    title: "Real-Time Stock Market Pipeline (Python)",
+    description: "Real-time stock data pipeline ingesting live prices for AAPL, GOOGL, MSFT, AMZN, TSLA every 30 seconds via Yahoo Finance API — stored in SQLite and visualised in a live Plotly Dash dashboard with KPI cards, trend charts and volume analysis.",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/stock-market-pipeline/main/dashboard_preview.png",
+    link: "https://github.com/Piyush-Analytics/stock-market-pipeline",
+    tech: ["Python", "Plotly Dash", "SQLite", "yfinance", "Pandas", "API"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built an end-to-end real-time stock market data pipeline using Python. The pipeline ingests live stock prices every 30 seconds via Yahoo Finance API, transforms and stores data in SQLite, and visualises it in a live auto-updating Plotly Dash dashboard — covering 5 major stocks: AAPL, GOOGL, MSFT, AMZN, TSLA."
+      },
+      {
+        heading: "Pipeline Architecture",
+        content: "Yahoo Finance API → Python Ingestion → SQLite Storage → Plotly Dash Dashboard"
+      },
+      {
+        heading: "Key Insights (Sample)",
+        content: "• TSLA had highest trading volume at 75.8M shares\n• TSLA showed strongest daily gain at +5.41%\n• GOOGL and AMZN showed slight decline (-1.34%, -0.31%)\n• MSFT and AAPL showed steady positive movement\n• Dashboard auto-refreshes every 30 seconds with latest data"
+      },
+      {
+        heading: "Features",
+        content: "• Live data ingestion — fetches prices every 30 seconds automatically\n• 5 KPI cards — real-time price + daily change % with green/red indicators\n• Price Trend chart — tracks all 5 stocks over time\n• Daily Change % chart — green/red bars showing gainers vs losers\n• Trading Volume chart — compares volume across all stocks\n• Data table — full metrics including Open, High, Low, Volume, Change %\n• SQLite storage — all data saved locally for historical analysis"
+      },
+      {
+        heading: "Technologies Used",
+        content: "Python 3.13, yfinance (Yahoo Finance API), Pandas, SQLite, Plotly Dash, SQLAlchemy"
+      }
+    ],
+  },
+  {
     id: "hospital-sql-analysis",
     title: "Hospital Data Analysis (SQL)",
     description: "30-Day SQL Micro Course project analyzing real-world hospital data using advanced SQL queries.",
