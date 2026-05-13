@@ -143,7 +143,7 @@ export const projects = [
   {
     id: "hr-analytics-eda",
     title: "HR Analytics — Employee Attrition EDA (Python)",
-    description: "Exploratory Data Analysis on IBM HR dataset of 1,470 employees using Python — uncovering key attrition drivers, workforce diversity patterns, and salary insights across 11 charts built with Pandas, Matplotlib and Seaborn.",
+    description: "Exploratory Data Analysis on IBM HR dataset of 1,470 employees — uncovering key attrition drivers, workforce diversity patterns, and salary insights across 11 charts built with Pandas, Matplotlib and Seaborn.",
     image: "https://raw.githubusercontent.com/Piyush-Analytics/HR-analytics-eda/main/HR_Analytics_Dashboard_Summary.png",
     link: "https://github.com/Piyush-Analytics/HR-analytics-eda",
     tech: ["Python", "Pandas", "Seaborn", "Matplotlib", "EDA"],
@@ -174,7 +174,7 @@ export const projects = [
     id: "hr-analytics-powerbi",
     title: "HR Analytics Dashboard (Power BI)",
     description: "Interactive Power BI dashboard analysing IBM HR Employee Attrition dataset — 1,470 employees, 5 KPI cards, 6 charts and 3 slicers covering attrition, department, overtime, tenure and gender diversity using DAX measures.",
-    image: "https://raw.githubusercontent.com/Piyush-Analytics/HR-Analytics-PowerBI/main/HR_Analytics_PowerBI_Dashboard.png",
+    image: "https://github.com/Piyush-Analytics/HR-Analytics-PowerBI/blob/main/HR_Analytics_PowerBI_Dashboard(1).png?raw=true",
     link: "https://github.com/Piyush-Analytics/HR-Analytics-PowerBI",
     tech: ["Power BI", "DAX", "Power Query", "Data Visualization"],
     details: [
@@ -206,11 +206,11 @@ export const projects = [
   },
   {
     id: "stock-market-pipeline",
-    title: "Real-Time Stock Market Pipeline (Python)",
-    description: "Real-time stock data pipeline ingesting live prices for AAPL, GOOGL, MSFT, AMZN, TSLA every 30 seconds via Yahoo Finance API — stored in SQLite and visualised in a live Plotly Dash dashboard with KPI cards, trend charts and volume analysis.",
+    title: "Real-Time Stock Market Pipeline(Python)",
+    description:"Real-time Python pipeline fetching live stock prices via Yahoo Finance API — stored in SQLite and visualised in an auto-updating Plotly Dash dashboard with KPI cards, trend and volume charts.",
     image: "https://raw.githubusercontent.com/Piyush-Analytics/stock-market-pipeline/main/dashboard_preview.png",
     link: "https://github.com/Piyush-Analytics/stock-market-pipeline",
-    tech: ["Python", "Plotly Dash", "SQLite", "yfinance", "Pandas", "API"],
+    tech: ["Plotly Dash", "SQLite", "yfinance", "Pandas", "API"],
     details: [
       {
         heading: "Overview",
@@ -231,6 +231,36 @@ export const projects = [
       {
         heading: "Technologies Used",
         content: "Python 3.13, yfinance (Yahoo Finance API), Pandas, SQLite, Plotly Dash, SQLAlchemy"
+      }
+    ],
+  },
+  {
+    id: "stock-market-powerbi",
+    title: "Stock Market Dashboard (Power BI)",
+    description: "Interactive Power BI dashboard visualising real-time stock data for AAPL, GOOGL, MSFT, AMZN, TSLA — featuring sparkline KPI cards, price trends, volume analysis and daily change % with a purple gradient theme.",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/stock-market-pipeline/main/Stock_Market_PowerBI.png",
+    link: "https://github.com/Piyush-Analytics/stock-market-pipeline",
+    tech: ["Power BI", "DAX", "Data Visualization", "Financial Analysis"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built an interactive Power BI dashboard on top of the real-time stock market pipeline — visualising live price data for 5 major stocks (AAPL, GOOGL, MSFT, AMZN, TSLA). Features sparkline KPI cards, price comparison, volume analysis, daily change % and price trend charts with a professional purple gradient theme."
+      },
+      {
+        heading: "Key Metrics",
+        content: "• AAPL: $292.68 (+0.24%)\n• MSFT: $412.66 (+1.20%)\n• GOOGL: $388.64 (-1.34%)\n• AMZN: $268.99 (-0.31%)\n• TSLA: $445.00 (+5.41%) — highest daily gain"
+      },
+      {
+        heading: "Features",
+        content: "• 5 KPI cards with sparklines — real-time price + trend indicator\n• Latest Price by Stock bar chart\n• Daily Change % with green/red conditional colors\n• Trading Volume comparison chart\n• Price Trend Over Time line chart\n• Full data table with High, Low, Volume, Change %\n• 2 slicers — Symbol and Timestamp filters"
+      },
+      {
+        heading: "DAX Measures",
+        content: "• Latest Price per stock — LASTNONBLANK measure\n• Avg Change % — AVERAGE(change_pct)\n• Total Volume — SUM(volume)\n• Max Price — MAX(price)\n• Min Price — MIN(price)"
+      },
+      {
+        heading: "Technologies Used",
+        content: "Power BI Desktop, DAX, CSV data from Python pipeline"
       }
     ],
   },
