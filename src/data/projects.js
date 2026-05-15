@@ -265,6 +265,62 @@ export const projects = [
     ],
   },
   {
+    id: "bank-fraud-detection-sql",
+    title: "Bank Transaction Fraud Detection (PostgreSQL)",
+    description: "End-to-end fraud detection system in PostgreSQL — 44+ queries across 6 complexity levels analysing 1.2M+ credit card transactions using window functions, CTEs, correlated subqueries and geographic anomaly detection.",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&auto=format&fit=crop&q=60",
+    link: "https://github.com/Piyush-Analytics/bank-fraud-detection-sql",
+    tech: ["PostgreSQL", "SQL", "Window Functions", "CTEs", "Fraud Detection"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built an end-to-end Bank Transaction Fraud Detection system in PostgreSQL — wrote 44+ queries across 6 complexity levels covering basic exploration, intermediate analysis, window functions, CTEs, subqueries and advanced fraud detection logic on 1.2M+ credit card transactions."
+      },
+      {
+        heading: "Fraud Detection Logic",
+        content: "• Velocity Check — flags 3+ transactions within same hour\n• Geographic Anomaly — calculates distance between customer & merchant\n• Spending Anomaly — flags transactions 3x above customer average\n• Risk Scorecard — labels customers as HIGH/MEDIUM/LOW risk\n• Time Pattern Analysis — night vs day, weekday vs weekend fraud rates\n• Rapid Transaction Detection — flags < 5 minute gaps between transactions"
+      },
+      {
+        heading: "Key Findings",
+        content: "• Overall fraud rate: ~0.58% of all transactions\n• Night time (12AM–6AM) has highest fraud rate\n• Shopping/misc categories show highest fraud counts\n• Customers spending 3x their average flagged as high risk\n• Rapid successive transactions (< 5 min gap) strong fraud indicator"
+      },
+      {
+        heading: "SQL Concepts Covered",
+        content: "• Window Functions — ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD, NTILE, PERCENT_RANK\n• CTEs — Simple, Multi-level, Recursive CTEs\n• Subqueries — Correlated, EXISTS, NOT EXISTS, Scalar\n• Date Functions — DATE_PART, DATE_TRUNC, AGE, EXTRACT\n• Export — COPY TO CSV"
+      },
+      {
+        heading: "Technologies Used",
+        content: "PostgreSQL 16, pgAdmin, SQL — 44+ queries across 6 complexity levels"
+      }
+    ],
+  },
+  {
+    id: "bank-fraud-detection-powerbi",
+    title: "Bank Fraud Detection Dashboard (Power BI)",
+    description: "Interactive Power BI dashboard visualising credit card fraud patterns — dark navy theme with KPI cards, fraud by category, state map, trend analysis and top merchant insights.",
+    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&auto=format&fit=crop&q=60",
+    link: "https://github.com/Piyush-Analytics/bank-fraud-detection-sql",
+    tech: ["Power BI", "DAX", "Data Visualization", "Fraud Analytics"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built an interactive Power BI dashboard on top of the Bank Fraud Detection SQL project — visualising fraud patterns across categories, states, merchants, gender and time using a professional dark navy theme with 6 KPI cards and 6 interactive charts."
+      },
+      {
+        heading: "Key Metrics",
+        content: "• Total Transactions analysed\n• Total Fraud Cases detected\n• Overall Fraud Rate %\n• Total Transaction Amount\n• Total Fraud Amount\n• Average Fraud Amount"
+      },
+      {
+        heading: "Features",
+        content: "• 6 KPI cards — Total Transactions, Fraud Count, Fraud Rate %, Total Amount, Fraud Amount, Avg Fraud Amount\n• Fraud by Category bar chart\n• Fraud Rate % by Category column chart\n• Fraud Trend Over Time line chart\n• Fraud by Gender donut chart\n• Top 10 Fraud Merchants bar chart\n• Fraud by State map visual\n• 3 slicers — Category, Gender, Date range"
+      },
+      {
+        heading: "Technologies Used",
+        content: "Power BI Desktop, DAX, Power Query"
+      }
+    ],
+  },
+  {
     id: "hospital-sql-analysis",
     title: "Hospital Data Analysis (SQL)",
     description: "30-Day SQL Micro Course project analyzing real-world hospital data using advanced SQL queries.",
