@@ -268,7 +268,7 @@ export const projects = [
     id: "bank-fraud-detection-sql",
     title: "Bank Transaction Fraud Detection (PostgreSQL)",
     description: "End-to-end fraud detection system in PostgreSQL — 44+ queries across 6 complexity levels analysing 1.2M+ credit card transactions using window functions, CTEs, correlated subqueries and geographic anomaly detection.",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&auto=format&fit=crop&q=60",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/bank-fraud-detection-sql/main/Screenshot%20(118)(1).png",
     link: "https://github.com/Piyush-Analytics/bank-fraud-detection-sql",
     tech: ["PostgreSQL", "SQL", "Window Functions", "CTEs", "Fraud Detection"],
     details: [
@@ -298,7 +298,7 @@ export const projects = [
     id: "bank-fraud-detection-powerbi",
     title: "Bank Fraud Detection Dashboard (Power BI)",
     description: "Interactive Power BI dashboard visualising credit card fraud patterns — dark navy theme with KPI cards, fraud by category, state map, trend analysis and top merchant insights.",
-    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&auto=format&fit=crop&q=60",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/bank-fraud-detection-sql/main/fraud_dashboard_preview.png",
     link: "https://github.com/Piyush-Analytics/bank-fraud-detection-sql",
     tech: ["Power BI", "DAX", "Data Visualization", "Fraud Analytics"],
     details: [
