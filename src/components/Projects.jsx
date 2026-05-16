@@ -134,12 +134,10 @@ const Projects = () => {
               className="flex items-center gap-2 px-6 py-2 text-sm font-medium rounded-full transition-all duration-300"
               style={{
                 border: "1px solid var(--border-color)",
-                color: "var(--text-color)",
-                background: "transparent",
+                color:  "black",
+                background: "white",
                 cursor: "pointer",
               }}
-              onMouseEnter={e => e.currentTarget.style.background = "var(--border-color)"}
-              onMouseLeave={e => e.currentTarget.style.background = "transparent"}
             >
               {showMore ? "↑ Show Less" : `↓ Show More Projects (${remainingProjects.length} more)`}
             </button>
@@ -166,3 +164,4 @@ const Projects = () => {
 };
 
 export default Projects;
+ 
