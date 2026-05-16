@@ -321,6 +321,40 @@ export const projects = [
     ],
   },
   {
+    id: "saas-churn-analysis",
+    title: "SaaS Customer Churn & Retention Analysis (PostgreSQL + Python)",
+    description: "Full-stack SaaS churn analysis on 7,043 Telco customers — 44+ PostgreSQL queries covering cohort analysis, MRR, CLV and churn prediction, plus 10 Python charts including a cohort retention heatmap.",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/saas-churn-analysis/main/SaaS_Churn_Dashboard_Summary.png",
+    link: "https://github.com/Piyush-Analytics/saas-churn-analysis",
+    tech: ["PostgreSQL", "Python", "Pandas", "Seaborn", "Cohort Analysis", "MRR"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built a full-stack SaaS Churn & Retention Analysis on the Telco Customer dataset (7,043 customers, 21 features) — covering cohort analysis, MRR tracking, CLV calculation and churn prediction using PostgreSQL (44+ queries) and Python (10 charts including cohort heatmap)."
+      },
+      {
+        heading: "Key Insights",
+        content: "• Overall churn rate: 26.5%\n• Month-to-month contracts churn at 42.7% vs Two year at 2.8%\n• Customers in first 12 months have 47.7% churn rate\n• Fiber optic customers churn at 41.9% — highest among all services\n• Two year contract customers have 3x higher CLV ($3,707 vs $1,275)\n• Senior citizens churn at 41.7% vs non-seniors at 23.6%\n• Customers with more services have significantly lower churn rates"
+      },
+      {
+        heading: "SQL Query Categories (44+ Queries)",
+        content: "• Basic Exploration (1-8) — SELECT, GROUP BY, CASE WHEN\n• MRR & Revenue (9-16) — CLV, MRR, Revenue at Risk\n• Cohort Analysis (17-22) — Cohort retention, survival analysis\n• Window Functions (23-30) — LAG, LEAD, RANK, PERCENT_RANK\n• Advanced CTEs (31-38) — Risk scoring, churn prediction\n• Business Insights (39-44) — Summary report, CSV export"
+      },
+      {
+        heading: "Python EDA Charts",
+        content: "• Churn Overview — count and pie chart\n• Churn by Contract Type — 42.7% vs 2.8%\n• Churn by Tenure Group — 0-12 months highest risk\n• Monthly Charges Distribution — churned vs retained\n• Churn by Internet Service — Fiber optic highest\n• Churn by Payment Method\n• Cohort Retention Heatmap — tenure vs contract\n• CLV by Contract Type\n• Senior Citizen Churn Analysis\n• Service Count vs Churn Rate"
+      },
+      {
+        heading: "Business Recommendations",
+        content: "• Incentivise long-term contracts — 2-year contracts have 15x lower churn\n• Focus on first 12 months — highest churn period needs onboarding investment\n• Review Fiber Optic pricing — 41.9% churn suggests value perception issues\n• Senior citizen retention program — 41.7% churn needs targeted support\n• Bundle more services — customers with more services churn significantly less"
+      },
+      {
+        heading: "Technologies Used",
+        content: "PostgreSQL 16, Python 3.13, Pandas, NumPy, Matplotlib, Seaborn"
+      }
+    ],
+  },
+  {
     id: "hospital-sql-analysis",
     title: "Hospital Data Analysis (SQL)",
     description: "30-Day SQL Micro Course project analyzing real-world hospital data using advanced SQL queries.",
