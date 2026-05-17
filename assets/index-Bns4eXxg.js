@@ -323,7 +323,23 @@ Please change the parent <Route path="${I}"> to <Route path="${I==="/"?"*":`${I}
 • Focus on first 12 months — highest churn period needs onboarding investment
 • Review Fiber Optic pricing — 41.9% churn suggests value perception issues
 • Senior citizen retention program — 41.7% churn needs targeted support
-• Bundle more services — customers with more services churn significantly less`},{heading:"Technologies Used",content:"PostgreSQL 16, Python 3.13, Pandas, NumPy, Matplotlib, Seaborn"}]},{id:"hospital-sql-analysis",title:"Hospital Data Analysis (SQL)",description:"30-Day SQL Micro Course project analyzing real-world hospital data using advanced SQL queries.",image:"https://i.pinimg.com/736x/e6/e9/e2/e6e9e27421c7392a0f4187cf6a961ae6.jpg",link:"https://github.com/Piyush-Analytics/Hospital-SQL-Data-Analysis/tree/16fefcd6e3f0335b374fe32461039ffbc9f57723#-outcome",tech:["SQL","Data Analysis","PostgreSQL"],details:[{heading:"Overview",content:"Completed a hands-on 30-Day SQL Micro Course, analyzing real-world hospital data using advanced SQL queries."},{heading:"Features",content:`• Aggregation functions & GROUP BY
+• Bundle more services — customers with more services churn significantly less`},{heading:"Technologies Used",content:"PostgreSQL 16, Python 3.13, Pandas, NumPy, Matplotlib, Seaborn"}]},{id:"saas-churn-powerbi",title:"SaaS Churn & Retention Dashboard (Power BI)",description:"Interactive Power BI dashboard visualising SaaS customer churn patterns — dark cyber theme with cyan accents, KPI cards, churn by contract, tenure trend, CLV analysis and payment method insights.",image:"https://raw.githubusercontent.com/Piyush-Analytics/saas-churn-analysis/main/saas_churn_powerbi_dashboard.png",link:"https://github.com/Piyush-Analytics/saas-churn-analysis",tech:["Power BI","DAX","Data Visualization","Churn Analytics"],details:[{heading:"Overview",content:"Built an interactive Power BI dashboard on top of the SaaS Churn Analysis project — visualising churn patterns across contract types, tenure groups, internet services and payment methods for 7,043 Telco customers using a professional dark cyber theme with cyan accents."},{heading:"Key Metrics",content:`• Total Customers: 7,043
+• Churned Customers: 1,869
+• Churn Rate: 26.5%
+• Total MRR: $456,116
+• Avg Customer CLV: $2,279`},{heading:"Key Insights",content:`• Month-to-month contracts churn at 42.7% vs Two year at 2.8%
+• 0-12 month tenure customers churn at 47.68% — highest risk group
+• Fiber optic customers show highest churn at 41.9%
+• Electronic check payment method has highest churn rate
+• Two year contract customers have 3x higher CLV
+• More services = lower churn rate consistently`},{heading:"Features",content:`• 5 KPI cards — Total Customers, Churned, Churn Rate %, Avg CLV, Total MRR
+• Churn by Contract — bar + line combo chart
+• Churn Rate by Tenure Group — area chart
+• Churn by Internet Service — horizontal bar
+• Avg CLV by Contract — column chart
+• Churn by Payment Method — horizontal bar
+• Services Subscribed vs Churn Rate
+• 3 slicers — Contract, Internet Service, Tenure Group`},{heading:"Technologies Used",content:"Power BI Desktop, DAX, Power Query"}]},{id:"hospital-sql-analysis",title:"Hospital Data Analysis (SQL)",description:"30-Day SQL Micro Course project analyzing real-world hospital data using advanced SQL queries.",image:"https://i.pinimg.com/736x/e6/e9/e2/e6e9e27421c7392a0f4187cf6a961ae6.jpg",link:"https://github.com/Piyush-Analytics/Hospital-SQL-Data-Analysis/tree/16fefcd6e3f0335b374fe32461039ffbc9f57723#-outcome",tech:["SQL","Data Analysis","PostgreSQL"],details:[{heading:"Overview",content:"Completed a hands-on 30-Day SQL Micro Course, analyzing real-world hospital data using advanced SQL queries."},{heading:"Features",content:`• Aggregation functions & GROUP BY
 • JOINs, date functions, and subqueries
 • Patient trends analysis
 • Hospital performance metrics
