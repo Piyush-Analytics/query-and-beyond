@@ -355,6 +355,36 @@ export const projects = [
     ],
   },
   {
+    id: "saas-churn-powerbi",
+    title: "SaaS Churn & Retention Dashboard (Power BI)",
+    description: "Interactive Power BI dashboard visualising SaaS customer churn patterns — dark cyber theme with cyan accents, KPI cards, churn by contract, tenure trend, CLV analysis and payment method insights.",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/saas-churn-analysis/main/saas_churn_powerbi_dashboard.png",
+    link: "https://github.com/Piyush-Analytics/saas-churn-analysis",
+    tech: ["Power BI", "DAX", "Data Visualization", "Churn Analytics"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built an interactive Power BI dashboard on top of the SaaS Churn Analysis project — visualising churn patterns across contract types, tenure groups, internet services and payment methods for 7,043 Telco customers using a professional dark cyber theme with cyan accents."
+      },
+      {
+        heading: "Key Metrics",
+        content: "• Total Customers: 7,043\n• Churned Customers: 1,869\n• Churn Rate: 26.5%\n• Total MRR: $456,116\n• Avg Customer CLV: $2,279"
+      },
+      {
+        heading: "Key Insights",
+        content: "• Month-to-month contracts churn at 42.7% vs Two year at 2.8%\n• 0-12 month tenure customers churn at 47.68% — highest risk group\n• Fiber optic customers show highest churn at 41.9%\n• Electronic check payment method has highest churn rate\n• Two year contract customers have 3x higher CLV\n• More services = lower churn rate consistently"
+      },
+      {
+        heading: "Features",
+        content: "• 5 KPI cards — Total Customers, Churned, Churn Rate %, Avg CLV, Total MRR\n• Churn by Contract — bar + line combo chart\n• Churn Rate by Tenure Group — area chart\n• Churn by Internet Service — horizontal bar\n• Avg CLV by Contract — column chart\n• Churn by Payment Method — horizontal bar\n• Services Subscribed vs Churn Rate\n• 3 slicers — Contract, Internet Service, Tenure Group"
+      },
+      {
+        heading: "Technologies Used",
+        content: "Power BI Desktop, DAX, Power Query"
+      }
+    ],
+  },
+  {
     id: "hospital-sql-analysis",
     title: "Hospital Data Analysis (SQL)",
     description: "30-Day SQL Micro Course project analyzing real-world hospital data using advanced SQL queries.",
