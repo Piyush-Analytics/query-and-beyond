@@ -385,6 +385,62 @@ export const projects = [
     ],
   },
   {
+    id: "supply-chain-sql",
+    title: "Supply Chain & Inventory Optimization (PostgreSQL)",
+    description: "End-to-end Supply Chain & Inventory system in PostgreSQL — 42+ queries covering reorder alerts, ABC analysis, supplier scorecards, stockout forecasting and single-source dependency risk on a 4-table database.",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/supply-chain-sql/main/supply_chain_dashboard.png",
+    link: "https://github.com/Piyush-Analytics/supply-chain-sql",
+    tech: ["PostgreSQL", "SQL", "Window Functions", "CTEs", "Supply Chain"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built an end-to-end Supply Chain & Inventory Optimization system in PostgreSQL — designed a 4-table schema (suppliers, products, inventory, orders) and wrote 42+ queries covering stock levels, reorder alerts, supplier performance, ABC analysis and stockout forecasting."
+      },
+      {
+        heading: "Business Features Built",
+        content: "• Reorder Alert System — flags products below reorder point\n• ABC Analysis — classifies products by value (A/B/C)\n• Supplier Scorecard — rates suppliers by delivery, spend, rating\n• Stockout Forecast — predicts when products will run out\n• Single Source Risk — flags products with only one supplier\n• Supply Chain Health Report — complete summary dashboard"
+      },
+      {
+        heading: "Key Findings",
+        content: "• Filing Cabinet and Standing Desk critically low on stock\n• TechSupply Co. is top supplier by spend with 4.5 rating\n• Electronics category holds highest inventory value\n• MegaSupplier flagged as HIGH RISK — 21 day lead time\n• Several products identified for immediate reorder"
+      },
+      {
+        heading: "SQL Concepts Covered",
+        content: "• Window Functions — ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD, NTILE\n• CTEs — Simple, Multi-level, Correlated\n• Subqueries — EXISTS, NOT EXISTS, Correlated, Scalar\n• Joins — INNER, LEFT across 4 tables\n• Date Functions — DATE_TRUNC, INTERVAL, CURRENT_DATE\n• Export — COPY TO CSV"
+      },
+      {
+        heading: "Technologies Used",
+        content: "PostgreSQL 16, pgAdmin, SQL — 42+ queries across 6 complexity levels"
+      }
+    ],
+  },
+  {
+    id: "supply-chain-powerbi",
+    title: "Supply Chain & Inventory Dashboard (Power BI)",
+    description: "Interactive Power BI dashboard visualising supply chain performance — dark navy theme with KPI cards, spend by category, supplier ratings, stock levels, monthly trends and order status analysis.",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/supply-chain-sql/main/supply_chain_dashboard.png",
+    link: "https://github.com/Piyush-Analytics/supply-chain-sql",
+    tech: ["Power BI", "DAX", "Data Visualization", "Supply Chain Analytics"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built an interactive Power BI dashboard on top of the Supply Chain SQL project — visualising stock levels, supplier performance, order trends and inventory health across categories using a professional dark navy theme with purple/cyan accents."
+      },
+      {
+        heading: "Key Metrics",
+        content: "• Total Orders: 30\n• Total Spend: $11M\n• On Time Delivery Rate: 100%\n• Avg Supplier Rating: 4.37\n• Avg Delivery Days: 8.27"
+      },
+      {
+        heading: "Features",
+        content: "• 5 KPI cards — Total Orders, Total Spend, On Time Delivery %, Avg Supplier Rating, Avg Delivery Days\n• Total Spend by Category — Electronics highest\n• Supplier Rating comparison\n• Monthly Order Trend line chart\n• Current Stock Levels with red/yellow/green status\n• Avg Delivery Days by Supplier\n• Order Status donut — Delivered/Pending/In Transit\n• 3 slicers — Category, Supplier, Status"
+      },
+      {
+        heading: "Technologies Used",
+        content: "Power BI Desktop, DAX, Power Query"
+      }
+    ],
+  },
+  {
     id: "hospital-sql-analysis",
     title: "Hospital Data Analysis (SQL)",
     description: "30-Day SQL Micro Course project analyzing real-world hospital data using advanced SQL queries.",
