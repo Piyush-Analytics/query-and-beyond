@@ -388,7 +388,7 @@ export const projects = [
     id: "supply-chain-sql",
     title: "Supply Chain & Inventory Optimization (PostgreSQL)",
     description: "End-to-end Supply Chain & Inventory system in PostgreSQL — 42+ queries covering reorder alerts, ABC analysis, supplier scorecards, stockout forecasting and single-source dependency risk on a 4-table database.",
-    image: "https://raw.githubusercontent.com/Piyush-Analytics/supply-chain-sql/main/supply_chain_dashboard.png",
+    image: "https://github.com/Piyush-Analytics/supply-chain-sql/blob/main/Supply%20Chain%20SQL%20Dataset%20Query%20.png?raw=true",
     link: "https://github.com/Piyush-Analytics/supply-chain-sql",
     tech: ["PostgreSQL", "SQL", "Window Functions", "CTEs", "Supply Chain"],
     details: [
