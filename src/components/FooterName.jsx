@@ -76,9 +76,9 @@ export default function FooterName() {
   });
 
   const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const mouseX = e.clientX - rect.left;
-    const normalizedX = (mouseX / rect.width) * VIEWBOX_WIDTH;
+    const r = e.currentTarget.getBoundingClientRect();
+    const mouseX = e.clientX - r.left;
+    const normalizedX = (mouseX / r.width) * VIEWBOX_WIDTH;
     gradientX1Raw.set(Math.max(0, Math.min(VIEWBOX_WIDTH, normalizedX)));
   };
 
@@ -87,58 +87,59 @@ export default function FooterName() {
   };
 
   return (
-    <div style={{ overflow: "hidden", width: "100%", position: "relative" }}>
+    <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
 
-      {/* Scroll to top button — bottom right, above name */}
-      <div style={{
-        position: "absolute",
-        bottom: "18%",
-        right: "2%",
-        zIndex: 10,
-      }}>
-        <button
-          onClick={scrollToTop}
-          title="Back to top"
-          style={{
-            width: "40px",
-            height: "40px",
-            border: "1px solid var(--border-color)",
-            background: "var(--bg-color)",
-            color: "var(--text-color)",
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: "4px",
-            opacity: 0.6,
-            transition: "opacity 0.2s ease",
-          }}
-          onMouseEnter={e => e.currentTarget.style.opacity = "1"}
-          onMouseLeave={e => e.currentTarget.style.opacity = "0.6"}
+      {/* Scroll to top — fixed bottom right like chanhdai.com */}
+      <button
+        onClick={scrollToTop}
+        title="Back to top"
+        style={{
+          position: "fixed",
+          bottom: "24px",
+          right: "24px",
+          zIndex: 50,
+          width: "36px",
+          height: "36px",
+          border: "1px solid var(--border-color)",
+          background: "var(--bg-color)",
+          color: "var(--text-color)",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          borderRadius: "4px",
+          opacity: 0.6,
+          transition: "opacity 0.2s ease",
+        }}
+        onMouseEnter={e => e.currentTarget.style.opacity = "1"}
+        onMouseLeave={e => e.currentTarget.style.opacity = "0.6"}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14" height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16" height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="18 15 12 9 6 15" />
-          </svg>
-        </button>
-      </div>
+          <polyline points="18 15 12 9 6 15" />
+        </svg>
+      </button>
 
-      {/* Name SVG */}
+      {/* Name — half cut off at bottom like chanhdai.com */}
       <div
-        style={{ display: "flex", width: "100%", transform: "translateY(37.5%)", cursor: "crosshair" }}
+        style={{
+          width: "100%",
+          transform: "translateY(50%)",
+          cursor: "crosshair",
+        }}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
         <svg
-          style={{ width: "100%", height: "auto" }}
+          style={{ width: "100%", height: "auto", display: "block" }}
           viewBox="0 0 1057 226"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
