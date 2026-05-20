@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
+import FloatingBg from "./components/FloatingBg";
 import Header from './components/Header'
 import Cover from './components/Cover'
 import Profile from './components/Profile'
@@ -17,31 +18,18 @@ import ProjectDetails from "./components/ProjectDetails";
 import LoadingScreen from "./components/LoadingScreen";
 
 const App = () => {
-  const noiseRef = useRef(null);
   const [showLogoVideo, setShowLogoVideo] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!noiseRef.current) return;
-    const canvas = noiseRef.current;
-    const ctx = canvas.getContext("2d");
-    const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
-    resize();
-    window.addEventListener("resize", resize);
-    const generateNoise = () => {
-      const imageData = ctx.createImageData(canvas.width, canvas.height);
-      const buffer = imageData.data;
-      for (let i = 0; i < buffer.length; i += 4) {
-        const shade = Math.random() * 255;
-        buffer[i] = shade; buffer[i + 1] = shade; buffer[i + 2] = shade; buffer[i + 3] = 20;
-      }
-      ctx.putImageData(imageData, 0, 0);
+    const warmup = () => {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      ctx.resume().then(() => ctx.close());
+      document.removeEventListener('click', warmup);
     };
-    let frame;
-    const loop = () => { generateNoise(); frame = requestAnimationFrame(loop); };
-    loop();
-    return () => { cancelAnimationFrame(frame); window.removeEventListener("resize", resize); };
-  }, [loading]);
+    document.addEventListener('click', warmup);
+    return () => document.removeEventListener('click', warmup);
+  }, []);
 
   return (
     <Router>
@@ -49,8 +37,8 @@ const App = () => {
         <LoadingScreen onFinish={() => setLoading(false)} />
       ) : (
         <>
-          <canvas ref={noiseRef} className="fixed inset-0 pointer-events-none z-[9999]" style={{ opacity: 1 }} />
           <Header showLogoVideo={showLogoVideo} />
+          <FloatingBg />
           <section className="relative z-10 mt-10">
             <Routes>
               <Route
