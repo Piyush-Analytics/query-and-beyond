@@ -87,59 +87,25 @@ export default function FooterName() {
   };
 
   return (
-    <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
+    <div style={{ width: "100%", overflow: "hidden", display: "flex", flexDirection: "column" }}>
 
-      {/* Scroll to top — fixed bottom right like chanhdai.com */}
-      <button
-        onClick={scrollToTop}
-        title="Back to top"
-        style={{
-          position: "fixed",
-          bottom: "24px",
-          right: "24px",
-          zIndex: 50,
-          width: "36px",
-          height: "36px",
-          border: "1px solid var(--border-color)",
-          background: "var(--bg-color)",
-          color: "var(--text-color)",
-          cursor: "pointer",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: "4px",
-          opacity: 0.6,
-          transition: "opacity 0.2s ease",
-        }}
-        onMouseEnter={e => e.currentTarget.style.opacity = "1"}
-        onMouseLeave={e => e.currentTarget.style.opacity = "0.6"}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="14" height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <polyline points="18 15 12 9 6 15" />
-        </svg>
-      </button>
-
-      {/* Name — half cut off at bottom like chanhdai.com */}
+      {/* Row 1 — Name half cut off */}
       <div
         style={{
           width: "100%",
-          transform: "translateY(50%)",
+          overflow: "hidden",
           cursor: "crosshair",
         }}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
         <svg
-          style={{ width: "100%", height: "auto", display: "block" }}
+          style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+            transform: "translateY(50%)",
+          }}
           viewBox="0 0 1057 226"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -152,10 +118,7 @@ export default function FooterName() {
             fill="currentColor"
             fillOpacity="0.04"
           />
-          <path
-            d={allFilled}
-            fill="url(#piyush_grad)"
-          />
+          <path d={allFilled} fill="url(#piyush_grad)" />
           <defs>
             <motion.linearGradient
               id="piyush_grad"
@@ -171,6 +134,52 @@ export default function FooterName() {
           </defs>
         </svg>
       </div>
+
+      {/* Row 2 — Scroll to top icon right aligned below name */}
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "flex-end",
+          padding: "12px 24px",
+          borderTop: "1px solid var(--border-color)",
+        }}
+      >
+        <button
+          onClick={scrollToTop}
+          title="Back to top"
+          style={{
+            width: "36px",
+            height: "36px",
+            border: "1px solid var(--border-color)",
+            background: "transparent",
+            color: "var(--text-color)",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: "4px",
+            opacity: 0.6,
+            transition: "opacity 0.2s ease",
+          }}
+          onMouseEnter={e => e.currentTarget.style.opacity = "1"}
+          onMouseLeave={e => e.currentTarget.style.opacity = "0.6"}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14" height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="18 15 12 9 6 15" />
+          </svg>
+        </button>
+      </div>
+
     </div>
   );
 }
