@@ -80,7 +80,7 @@ const Footer = () => {
             className="w-full max-w-sm flex flex-col gap-4 mt-10"
           >
             {/* WEB3FORMS ACCESS KEY */}
-            <input type="hidden" name="access_key" value="4cfd9da7-29b7-4549-93b9-1b051d4f475a" />
+            <input type="hidden" name="access_key" value="7db19529-7116-4af2-819b-b1c2076a36e0" />
 
             <input 
               type="text" 
