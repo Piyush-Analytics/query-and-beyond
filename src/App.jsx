@@ -16,6 +16,7 @@ import StatsBridge from './components/StatsBridge'
 import DinoGame from './components/DinoGame'
 import ProjectDetails from "./components/ProjectDetails";
 import LoadingScreen from "./components/LoadingScreen";
+import Bookshelf from './components/Bookshelf'
 
 const App = () => {
   const [showLogoVideo, setShowLogoVideo] = useState(false);
@@ -53,6 +54,7 @@ const App = () => {
                     <Stack />
                     <Projects />
                     <StatsBridge />
+                    <Bookshelf />
                     <DinoGame />
                     <Footer />
                     <FooterName />
@@ -71,6 +73,7 @@ const App = () => {
                     <Stack />
                     <Projects />
                     <StatsBridge />
+                    <Bookshelf />
                     <DinoGame />
                     <Footer />
                     <FooterName />
