@@ -8,8 +8,8 @@ const books = [
     year: "2002",
     genre: "Magical Realism",
     description: "A young boy runs away from home and a series of bizarre events unfold across Japan in this dreamlike masterpiece.",
-    cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGr6UkKjc0JVsznyLuLpa-98sj6CgR3wYOryq6s1GPdVUpyCwrYV_nqrucq1nmzcLH4qzyo7n6_7W0WI4RDB9nKYOfFy3t88x8hH5XvA&s=10",
-    pdfLink: "https://archive.org/details/kafka-on-the-shore",
+    cover: "https://covers.openlibrary.org/b/isbn/9780099494094-L.jpg",
+    pdfLink: "https://www.google.com/search?q=Kafka+on+the+Shore+Haruki+Murakami+read+online+free",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const books = [
     genre: "Literary Fiction",
     description: "An unforgettable story of four college friends navigating trauma, friendship, and the struggle to survive.",
     cover: "https://covers.openlibrary.org/b/isbn/9780804172707-L.jpg",
-    pdfLink: "https://archive.org/details/alittlelife0000yana",
+    pdfLink: "https://www.google.com/search?q=A+Little+Life+Hanya+Yanagihara+read+online+free",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const books = [
     genre: "Memoir",
     description: "A touching true story of lessons about life, love and loss shared between a dying professor and his former student.",
     cover: "https://covers.openlibrary.org/b/isbn/9780751527377-L.jpg",
-    pdfLink: "https://archive.org/details/tuesdayswithmorr00albo",
+    pdfLink: "https://www.google.com/search?q=Tuesdays+with+Morrie+Mitch+Albom+read+online+free",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const books = [
     genre: "Romantic Fiction",
     description: "A lonely dreamer falls in love during four magical white nights in St. Petersburg — a timeless tale of longing.",
     cover: "https://covers.openlibrary.org/b/isbn/9780140449228-L.jpg",
-    pdfLink: "https://archive.org/details/whitenights00dost",
+    pdfLink: "https://www.gutenberg.org/files/36034/36034-h/36034-h.htm",
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ const books = [
     genre: "Magical Realism",
     description: "In a small Tokyo café, customers can travel back in time — but only under one condition: finish before the coffee gets cold.",
     cover: "https://covers.openlibrary.org/b/isbn/9781529029581-L.jpg",
-    pdfLink: "https://archive.org/details/beforethecoffeeg0000kawa",
+    pdfLink: "https://www.google.com/search?q=Before+the+Coffee+Gets+Cold+Kawaguchi+read+online+free",
   },
 ];
 
@@ -72,6 +72,21 @@ export default function Bookshelf() {
           >
             {books.length} books
           </span>
+        </div>
+      </div>
+
+      {/* Description */}
+      <div className="flex justify-center">
+        <div
+          className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[75%] lg:max-w-[61.5%] border-x-2 border-b-2 px-4 sm:px-6 md:px-8 py-4"
+          style={{ borderColor: "var(--border-color)" }}
+        >
+          <p
+            className="text-sm font-medium"
+            style={{ color: "var(--text-color)", opacity: 0.55, lineHeight: "1.7", fontStyle: "italic" }}
+          >
+            Between datasets and dashboards, I escape into stories. Here are a few novels that have stayed with me long after the last page.
+          </p>
         </div>
       </div>
 
