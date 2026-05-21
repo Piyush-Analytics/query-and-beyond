@@ -8,7 +8,7 @@ const books = [
     year: "2002",
     genre: "Magical Realism",
     description: "A young boy runs away from home and a series of bizarre events unfold across Japan in this dreamlike masterpiece.",
-    cover: "https://covers.openlibrary.org/b/isbn/9780099494094-L.jpg",
+    cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGr6UkKjc0JVsznyLuLpa-98sj6CgR3wYOryq6s1GPdVUpyCwrYV_nqrucq1nmzcLH4qzyo7n6_7W0WI4RDB9nKYOfFy3t88x8hH5XvA&s=10",
     pdfLink: "https://www.google.com/search?q=Kafka+on+the+Shore+Haruki+Murakami+read+online+free",
   },
   {
