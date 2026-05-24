@@ -441,6 +441,62 @@ export const projects = [
     ],
   },
   {
+    id: "ecommerce-funnel-analysis",
+    title: "E-Commerce Funnel & Conversion Analysis (PostgreSQL + Python)",
+    description: "Full-stack E-Commerce analysis on 397K+ transactions — RFM segmentation, cohort retention heatmap, customer funnel and revenue trends using PostgreSQL (42+ queries) and Python (10 charts).",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/ecommerce-funnel-analysis/main/ECommerce_Dashboard_Summary.png",
+    link: "https://github.com/Piyush-Analytics/ecommerce-funnel-analysis",
+    tech: ["PostgreSQL", "Python", "Pandas", "Seaborn", "RFM Analysis", "Cohort Analysis"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built a full-stack E-Commerce Funnel & Conversion Analysis on the UCI Retail dataset (397,880 transactions, 4,338 customers, 37 countries) — covering RFM analysis, cohort retention, customer segmentation and revenue trends using PostgreSQL (42+ queries) and Python (10 charts)."
+      },
+      {
+        heading: "Key Insights",
+        content: "• Total Revenue: £8,911,407 across 18,532 orders\n• UK dominates — £7.3M (82% of total revenue)\n• Peak hour: 12PM — highest order volume daily\n• Champions segment generates £6.2M — 70% of total revenue\n• 40.6% of customers are one-time buyers — retention opportunity\n• November 2011 was peak month — seasonal holiday spike\n• Cohort retention drops to ~20% by month 3 — critical churn window"
+      },
+      {
+        heading: "SQL Query Categories (42+ Queries)",
+        content: "• Basic Exploration (1-8) — SELECT, GROUP BY, JOINs\n• Funnel Analysis (9-16) — Conversion, basket size, new vs returning\n• RFM Analysis (17-22) — NTILE, cohort retention, CLV\n• Window Functions (23-30) — LAG, LEAD, RANK, moving average\n• Advanced CTEs (31-38) — ABC analysis, Pareto, EXISTS\n• Export (39-42) — Summary report, CSV export"
+      },
+      {
+        heading: "Business Recommendations",
+        content: "• Retention campaign — 40.6% one-time buyers need re-engagement\n• Peak hour targeting — run promotions at 12PM for max conversion\n• UK market focus — 82% revenue, invest more in UK marketing\n• Champion loyalty program — protect top 6.3% who drive 70% revenue\n• Month 3 churn intervention — retention drops sharply at 3 months"
+      },
+      {
+        heading: "Technologies Used",
+        content: "PostgreSQL 16, Python 3.13, Pandas, NumPy, Matplotlib, Seaborn"
+      }
+    ],
+  },
+  {
+    id: "ecommerce-powerbi-dashboard",
+    title: "E-Commerce Funnel Dashboard (Power BI)",
+    description: "Interactive Power BI dashboard visualising E-Commerce funnel metrics — dark theme with KPI cards, monthly revenue trend, RFM segments, country analysis, hourly patterns and top product insights.",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/ecommerce-funnel-analysis/main/ecommerce_powerbi_dashboard.png",
+    link: "https://github.com/Piyush-Analytics/ecommerce-funnel-analysis",
+    tech: ["Power BI", "DAX", "Data Visualization", "E-Commerce Analytics"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built an interactive Power BI dashboard on top of the E-Commerce Funnel Analysis project — visualising revenue trends, RFM customer segments, country performance, hourly order patterns and top products for 397K+ transactions using a professional dark theme."
+      },
+      {
+        heading: "Key Metrics",
+        content: "• Total Revenue: £8.91M\n• Total Orders: 19K\n• Total Customers: 4K\n• Avg Order Value: £480.87\n• Total Products: 4K"
+      },
+      {
+        heading: "Features",
+        content: "• 5 KPI cards — Total Revenue, Orders, Customers, Avg Order Value, Products\n• Monthly Revenue Trend line chart — Nov 2011 peak visible\n• Orders by Hour — peak at 12PM\n• Revenue by RFM Segment — Champions dominate\n• Customer Segment Distribution donut\n• Top 10 Countries by Revenue — UK £7.3M\n• Top 10 Products by Revenue\n• 3 slicers — Country, Day of Week, Month"
+      },
+      {
+        heading: "Technologies Used",
+        content: "Power BI Desktop, DAX, Power Query"
+      }
+    ],
+  },
+  {
     id: "hospital-sql-analysis",
     title: "Hospital Data Analysis (SQL)",
     description: "30-Day SQL Micro Course project analyzing real-world hospital data using advanced SQL queries.",
