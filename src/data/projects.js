@@ -474,7 +474,7 @@ export const projects = [
     id: "ecommerce-powerbi-dashboard",
     title: "E-Commerce Funnel Dashboard (Power BI)",
     description: "Interactive Power BI dashboard visualising E-Commerce funnel metrics — dark theme with KPI cards, monthly revenue trend, RFM segments, country analysis, hourly patterns and top product insights.",
-    image: "https://raw.githubusercontent.com/Piyush-Analytics/ecommerce-funnel-analysis/main/ecommerce_powerbi_dashboard.png",
+    image: "https://github.com/Piyush-Analytics/ecommerce-funnel-analysis/blob/main/E-Commerce%20Dashboard%20.png?raw=true",
     link: "https://github.com/Piyush-Analytics/ecommerce-funnel-analysis",
     tech: ["Power BI", "DAX", "Data Visualization", "E-Commerce Analytics"],
     details: [
