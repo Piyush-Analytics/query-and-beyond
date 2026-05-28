@@ -497,6 +497,62 @@ export const projects = [
     ],
   },
   {
+    id: "financial-risk-audit",
+    title: "Financial Risk & Audit Analytics (PostgreSQL + Python)",
+    description: "End-to-end Financial Risk & Audit system on 284K+ credit card transactions — Benford's Law analysis, Value at Risk, Z-score anomaly detection, audit sampling and risk scoring using PostgreSQL (40+ queries) and Python.",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/financial-risk-audit/main/Financial_Risk_Dashboard_Summary.png",
+    link: "https://github.com/Piyush-Analytics/financial-risk-audit",
+    tech: ["PostgreSQL", "Python", "Pandas", "Risk Analysis", "Audit Analytics", "Benford's Law"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built a Financial Risk & Audit Analytics system on 284,807 credit card transactions — covering anomaly detection, Benford's Law analysis, Value at Risk (VaR), audit sampling and risk scoring using PostgreSQL (40+ queries) and Python (9 charts). Directly applicable to Big 4 audit and financial risk roles."
+      },
+      {
+        heading: "Key Insights",
+        content: "• Overall fraud rate: 0.172% — 492 fraud cases out of 284,807\n• Fraud avg amount: $122.21 vs legitimate $88.29\n• Night hours (0-6AM) show highest fraud concentration\n• Critical risk transactions (>$1K) — 1,727 flagged for immediate audit\n• Benford's Law deviation detected — potential data manipulation signal\n• VaR 99% — $1,000+ threshold for high-risk flagging\n• Z-score anomalies (3σ+) — 977 transactions flagged"
+      },
+      {
+        heading: "Big 4 Relevant Skills",
+        content: "• Benford's Law — first digit analysis for fraud detection\n• Value at Risk (VaR) — financial risk quantification\n• Audit Sampling — systematic and stratified sampling\n• Materiality Threshold — standard audit concept\n• Z-Score Anomaly Detection — statistical outlier flagging\n• Round Number Testing — common audit red flag test\n• Control Effectiveness — measuring detection accuracy"
+      },
+      {
+        heading: "SQL Query Categories (40+ Queries)",
+        content: "• Basic Exploration (1-8) — Statistical summary, percentiles\n• Risk Analysis (9-16) — Z-score, VaR, Benford's Law, anomaly detection\n• Audit Analytics (17-24) — Sampling, materiality, round number testing\n• Window Functions (25-32) — LAG, LEAD, RANK, cumulative fraud rate\n• Advanced CTEs (33-40) — Multi-CTE risk dashboard, Pareto, EXISTS"
+      },
+      {
+        heading: "Technologies Used",
+        content: "PostgreSQL 16, Python 3.13, Pandas, NumPy, Matplotlib, Seaborn"
+      }
+    ],
+  },
+  {
+    id: "financial-risk-powerbi",
+    title: "Financial Risk & Audit Dashboard (Power BI)",
+    description: "Interactive Power BI dashboard visualising financial risk metrics — light theme with KPI cards, fraud overview, hourly patterns, risk level exposure, time period analysis and audit priority insights.",
+    image: "https://raw.githubusercontent.com/Piyush-Analytics/financial-risk-audit/main/financial_risk_powerbi_dashboard.png",
+    link: "https://github.com/Piyush-Analytics/financial-risk-audit",
+    tech: ["Power BI", "DAX", "Data Visualization", "Financial Analytics"],
+    details: [
+      {
+        heading: "Overview",
+        content: "Built an interactive Power BI dashboard on top of the Financial Risk & Audit project — visualising fraud patterns, risk level exposure, hourly transaction patterns and time period analysis for 284K+ credit card transactions using a clean light professional theme."
+      },
+      {
+        heading: "Key Metrics",
+        content: "• Total Transactions: 144K\n• Total Fraud Cases: 492\n• Fraud Rate: 0.19%\n• Total Amount: £13.09M\n• Avg Fraud Amount: $122.21"
+      },
+      {
+        heading: "Features",
+        content: "• 5 KPI cards — Total Transactions, Fraud Cases, Fraud Rate %, Total Amount, Avg Fraud Amount\n• Transaction Overview donut — 99.8% Legitimate vs 0.19% Fraud\n• Hourly Transaction Pattern — dual axis line + column\n• Fraud Count by Risk Level — column chart\n• Total Exposure by Risk Level — horizontal bar\n• Fraud Amount by Risk Level\n• Transactions by Time Period — Fraud vs Legitimate\n• 3 slicers — Status, Risk Level, Time Period"
+      },
+      {
+        heading: "Technologies Used",
+        content: "Power BI Desktop, DAX, Power Query"
+      }
+    ],
+  },
+  {
     id: "hospital-sql-analysis",
     title: "Hospital Data Analysis (SQL)",
     description: "30-Day SQL Micro Course project analyzing real-world hospital data using advanced SQL queries.",
