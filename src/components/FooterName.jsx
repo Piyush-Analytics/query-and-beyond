@@ -1,81 +1,141 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useRef } from "react";
+
+const VIEWBOX_WIDTH = 1057;
+const DEFAULT_GRADIENT_X = 528;
+
+const G = 32;
+
+function rect(x, y, w, h) {
+  const x1 = x;
+  const y1 = y;
+  const x2 = x + w * G;
+  const y2 = y + h * G;
+  return `M${x1} ${y1} H${x2} V${y2} H${x1} Z `;
+}
+
+const P_x = 1;
+const P = [
+  rect(P_x,        1,  5,  1),
+  rect(P_x,        1,  1,  7),
+  rect(P_x,        1,  1,  1),
+  rect(P_x + 4*G,  1,  1,  3),
+  rect(P_x,        3*G+1, 5, 1),
+];
+
+const I_x = 193;
+const I = [
+  rect(I_x,        1,  3,  1),
+  rect(I_x,       6*G+1, 3, 1),
+  rect(I_x + G,    1,  1,  7),
+];
+
+const Y_x = 353;
+const Y = [
+  rect(Y_x,        1,  1,  4),
+  rect(Y_x + 4*G,  1,  1,  4),
+  rect(Y_x + G,    3*G+1, 1, 1),
+  rect(Y_x + 3*G,  3*G+1, 1, 1),
+  rect(Y_x + 2*G,  3*G+1, 1, 4),
+];
+
+const U_x = 545;
+const U = [
+  rect(U_x,        1,  1,  6),
+  rect(U_x + 4*G,  1,  1,  6),
+  rect(U_x,       6*G+1, 5, 1),
+];
+
+const S_x = 705;
+const S = [
+  rect(S_x,        1,  5,  1),
+  rect(S_x,        1,  1,  3),
+  rect(S_x,       3*G+1, 5, 1),
+  rect(S_x + 4*G, 3*G+1, 1, 3),
+  rect(S_x,       6*G+1, 5, 1),
+];
+
+const H_x = 897;
+const H = [
+  rect(H_x,        1,  1,  7),
+  rect(H_x + 4*G,  1,  1,  7),
+  rect(H_x,       3*G+1, 5, 1),
+];
+
+const allFilled = [...P, ...I, ...Y, ...U, ...S, ...H].join(" ");
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 export default function FooterName() {
-  const containerRef = useRef(null);
-  const mouseX = useMotionValue(0.5);
-  const smoothX = useSpring(mouseX, { stiffness: 200, damping: 30, mass: 0.5 });
+  const gradientX1Raw = useMotionValue(DEFAULT_GRADIENT_X);
+  const gradientX1 = useSpring(gradientX1Raw, {
+    stiffness: 200,
+    damping: 30,
+    mass: 0.5,
+  });
 
   const handleMouseMove = (e) => {
     const r = e.currentTarget.getBoundingClientRect();
-    mouseX.set((e.clientX - r.left) / r.width);
+    const mouseX = e.clientX - r.left;
+    const normalizedX = (mouseX / r.width) * VIEWBOX_WIDTH;
+    gradientX1Raw.set(Math.max(0, Math.min(VIEWBOX_WIDTH, normalizedX)));
   };
 
   const handleMouseLeave = () => {
-    mouseX.set(0.5);
+    gradientX1Raw.set(DEFAULT_GRADIENT_X);
   };
-
-  // PiYuSh — alternating case letters with individual styling
-  const letters = [
-    { char: "P", upper: true },
-    { char: "i", upper: false },
-    { char: "Y", upper: true },
-    { char: "u", upper: false },
-    { char: "S", upper: true },
-    { char: "h", upper: false },
-  ];
 
   return (
     <div style={{ width: "100%", overflow: "hidden", display: "flex", flexDirection: "column" }}>
 
       {/* Row 1 — Name half cut off */}
       <div
-        ref={containerRef}
         style={{
           width: "100%",
           overflow: "hidden",
           cursor: "crosshair",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-end",
         }}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
-        <motion.div
+        <svg
           style={{
-            display: "flex",
-            alignItems: "baseline",
-            transform: "translateY(45%)",
-            userSelect: "none",
-            lineHeight: 1,
+            width: "100%",
+            height: "auto",
+            display: "block",
+            transform: "translateY(50%)",
           }}
+          viewBox="0 0 1057 226"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          {letters.map((l, i) => (
-            <motion.span
-              key={i}
-              style={{
-                fontSize: "clamp(80px, 18vw, 220px)",
-                fontWeight: 900,
-                fontFamily: "'IBM Plex Mono', monospace",
-                letterSpacing: "-0.02em",
-                color: "currentColor",
-                opacity: l.upper ? 0.85 : 0.25,
-                display: "inline-block",
-                lineHeight: 1,
-              }}
+          <path
+            d={allFilled}
+            stroke="currentColor"
+            strokeOpacity="0.1"
+            strokeWidth="1.5"
+            fill="currentColor"
+            fillOpacity="0.04"
+          />
+          <path d={allFilled} fill="url(#piyush_grad)" />
+          <defs>
+            <motion.linearGradient
+              id="piyush_grad"
+              x1={gradientX1}
+              y1="1"
+              x2="609"
+              y2="225"
+              gradientUnits="userSpaceOnUse"
             >
-              {l.char}
-            </motion.span>
-          ))}
-        </motion.div>
+              <stop offset="0.3" stopColor="currentColor" stopOpacity="0" />
+              <stop offset="1" stopColor="currentColor" stopOpacity="0.85" />
+            </motion.linearGradient>
+          </defs>
+        </svg>
       </div>
 
-      {/* Row 2 — Scroll to top */}
+      {/* Row 2 — Scroll to top icon right aligned below name */}
       <div
         style={{
           width: "100%",
@@ -105,9 +165,16 @@ export default function FooterName() {
           onMouseEnter={e => e.currentTarget.style.opacity = "1"}
           onMouseLeave={e => e.currentTarget.style.opacity = "0.6"}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14" height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <polyline points="18 15 12 9 6 15" />
           </svg>
         </button>
