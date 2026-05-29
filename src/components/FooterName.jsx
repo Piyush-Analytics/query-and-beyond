@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
-const VIEWBOX_WIDTH = 1057;
-const DEFAULT_GRADIENT_X = 528;
+const VIEWBOX_WIDTH = 1200;
+const DEFAULT_GRADIENT_X = 600;
 
 const G = 32;
 
@@ -13,6 +13,10 @@ function rect(x, y, w, h) {
   return `M${x1} ${y1} H${x2} V${y2} H${x1} Z `;
 }
 
+// Spacing between letters increased to 48px gap
+// P=1, I=225, Y=417, U=641, S=833, H=1057
+// Original offsets + extra 32px gap between each letter
+
 const P_x = 1;
 const P = [
   rect(P_x,        1,  5,  1),
@@ -22,14 +26,15 @@ const P = [
   rect(P_x,        3*G+1, 5, 1),
 ];
 
-const I_x = 193;
+// i — lowercase style (shorter, centered)
+const I_x = 225;
 const I = [
-  rect(I_x,        1,  3,  1),
-  rect(I_x,       6*G+1, 3, 1),
-  rect(I_x + G,    1,  1,  7),
+  rect(I_x + G,    2*G+1,  1,  4), // shorter bar — starts at row 2
+  rect(I_x + G,    G+1,    1,  1), // dot above
 ];
 
-const Y_x = 353;
+// Y — uppercase
+const Y_x = 385;
 const Y = [
   rect(Y_x,        1,  1,  4),
   rect(Y_x + 4*G,  1,  1,  4),
@@ -38,14 +43,16 @@ const Y = [
   rect(Y_x + 2*G,  3*G+1, 1, 4),
 ];
 
-const U_x = 545;
+// u — lowercase style (no top bar)
+const U_x = 577;
 const U = [
-  rect(U_x,        1,  1,  6),
-  rect(U_x + 4*G,  1,  1,  6),
-  rect(U_x,       6*G+1, 5, 1),
+  rect(U_x,        2*G+1,  1,  4), // starts lower
+  rect(U_x + 4*G,  2*G+1,  1,  4),
+  rect(U_x,        6*G+1, 5, 1),
 ];
 
-const S_x = 705;
+// S — uppercase
+const S_x = 737;
 const S = [
   rect(S_x,        1,  5,  1),
   rect(S_x,        1,  1,  3),
@@ -54,11 +61,12 @@ const S = [
   rect(S_x,       6*G+1, 5, 1),
 ];
 
-const H_x = 897;
+// h — lowercase style (left bar full, right side starts lower)
+const H_x = 929;
 const H = [
-  rect(H_x,        1,  1,  7),
-  rect(H_x + 4*G,  1,  1,  7),
-  rect(H_x,       3*G+1, 5, 1),
+  rect(H_x,        1,  1,  7),       // left bar full height
+  rect(H_x + 4*G,  3*G+1,  1,  4),  // right bar starts lower
+  rect(H_x,        3*G+1, 5, 1),     // middle bar
 ];
 
 const allFilled = [...P, ...I, ...Y, ...U, ...S, ...H].join(" ");
@@ -106,7 +114,7 @@ export default function FooterName() {
             display: "block",
             transform: "translateY(50%)",
           }}
-          viewBox="0 0 1057 226"
+          viewBox="0 0 1200 226"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -124,7 +132,7 @@ export default function FooterName() {
               id="piyush_grad"
               x1={gradientX1}
               y1="1"
-              x2="609"
+              x2="700"
               y2="225"
               gradientUnits="userSpaceOnUse"
             >
