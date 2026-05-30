@@ -1,71 +1,64 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
-// Larger grid unit for bigger letters like chanhdai
-const G = 48;
-const VIEWBOX_WIDTH = 1800;
-const DEFAULT_GRADIENT_X = 900;
+const VIEWBOX_WIDTH = 1057;
+const DEFAULT_GRADIENT_X = 528;
+
+const G = 32;
 
 function rect(x, y, w, h) {
-  return `M${x} ${y} H${x + w*G} V${y + h*G} H${x} Z `;
+  const x1 = x;
+  const y1 = y;
+  const x2 = x + w * G;
+  const y2 = y + h * G;
+  return `M${x1} ${y1} H${x2} V${y2} H${x1} Z `;
 }
 
-// Each letter slot = 5 cols * 48 = 240px wide
-// Gap between letters = 80px
-// Slot = 320px
-// 6 letters * 320 = 1920 — fits in 1800 with slight compression
-
-const SLOT = 300;
-
-// P — uppercase full height 7 rows
-const P_x = 0;
+const P_x = 1;
 const P = [
-  rect(P_x,          1,  5,  1),
-  rect(P_x,          1,  1,  7),
-  rect(P_x + 4*G,    1,  1,  3),
-  rect(P_x,       3*G+1,  5,  1),
+  rect(P_x,        1,  5,  1),
+  rect(P_x,        1,  1,  7),
+  rect(P_x,        1,  1,  1),
+  rect(P_x + 4*G,  1,  1,  3),
+  rect(P_x,        3*G+1, 5, 1),
 ];
 
-// i — lowercase (dot + short body)
-const I_x = SLOT;
+const I_x = 193;
 const I = [
-  rect(I_x + G,    G+1,   1,  1),
-  rect(I_x + G,  2*G+1,   1,  5),
+  rect(I_x,        1,  3,  1),
+  rect(I_x,       6*G+1, 3, 1),
+  rect(I_x + G,    1,  1,  7),
 ];
 
-// Y — uppercase full height
-const Y_x = SLOT * 2;
+const Y_x = 353;
 const Y = [
-  rect(Y_x,          1,  1,  4),
-  rect(Y_x + 4*G,    1,  1,  4),
-  rect(Y_x + G,   3*G+1,  1,  1),
-  rect(Y_x + 3*G, 3*G+1,  1,  1),
-  rect(Y_x + 2*G, 3*G+1,  1,  4),
+  rect(Y_x,        1,  1,  4),
+  rect(Y_x + 4*G,  1,  1,  4),
+  rect(Y_x + G,    3*G+1, 1, 1),
+  rect(Y_x + 3*G,  3*G+1, 1, 1),
+  rect(Y_x + 2*G,  3*G+1, 1, 4),
 ];
 
-// u — lowercase (no top, starts row 3)
-const U_x = SLOT * 3;
+const U_x = 545;
 const U = [
-  rect(U_x,        2*G+1,  1,  4),
-  rect(U_x + 4*G,  2*G+1,  1,  4),
-  rect(U_x,        6*G+1,  5,  1),
+  rect(U_x,        1,  1,  6),
+  rect(U_x + 4*G,  1,  1,  6),
+  rect(U_x,       6*G+1, 5, 1),
 ];
 
-// S — uppercase full height
-const S_x = SLOT * 4;
+const S_x = 705;
 const S = [
-  rect(S_x,          1,  5,  1),
-  rect(S_x,          1,  1,  3),
-  rect(S_x,       3*G+1,  5,  1),
-  rect(S_x + 4*G, 3*G+1,  1,  3),
-  rect(S_x,       6*G+1,  5,  1),
+  rect(S_x,        1,  5,  1),
+  rect(S_x,        1,  1,  3),
+  rect(S_x,       3*G+1, 5, 1),
+  rect(S_x + 4*G, 3*G+1, 1, 3),
+  rect(S_x,       6*G+1, 5, 1),
 ];
 
-// h — lowercase (left bar full, right starts row 3)
-const H_x = SLOT * 5;
+const H_x = 897;
 const H = [
-  rect(H_x,          1,  1,  7),
-  rect(H_x + 4*G, 3*G+1,  1,  4),
-  rect(H_x,       3*G+1,  5,  1),
+  rect(H_x,        1,  1,  7),
+  rect(H_x + 4*G,  1,  1,  7),
+  rect(H_x,       3*G+1, 5, 1),
 ];
 
 const allFilled = [...P, ...I, ...Y, ...U, ...S, ...H].join(" ");
@@ -77,7 +70,9 @@ const scrollToTop = () => {
 export default function FooterName() {
   const gradientX1Raw = useMotionValue(DEFAULT_GRADIENT_X);
   const gradientX1 = useSpring(gradientX1Raw, {
-    stiffness: 200, damping: 30, mass: 0.5,
+    stiffness: 200,
+    damping: 30,
+    mass: 0.5,
   });
 
   const handleMouseMove = (e) => {
@@ -96,13 +91,22 @@ export default function FooterName() {
 
       {/* Row 1 — Name half cut off */}
       <div
-        style={{ width: "100%", overflow: "hidden", cursor: "crosshair" }}
+        style={{
+          width: "100%",
+          overflow: "hidden",
+          cursor: "crosshair",
+        }}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
         <svg
-          style={{ width: "100%", height: "auto", display: "block", transform: "translateY(50%)" }}
-          viewBox={`0 0 ${VIEWBOX_WIDTH} 340`}
+          style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+            transform: "translateY(50%)",
+          }}
+          viewBox="0 0 1057 226"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -120,8 +124,8 @@ export default function FooterName() {
               id="piyush_grad"
               x1={gradientX1}
               y1="1"
-              x2="1000"
-              y2="339"
+              x2="609"
+              y2="225"
               gradientUnits="userSpaceOnUse"
             >
               <stop offset="0.3" stopColor="currentColor" stopOpacity="0" />
@@ -131,32 +135,51 @@ export default function FooterName() {
         </svg>
       </div>
 
-      {/* Row 2 — Scroll to top */}
-      <div style={{
-        width: "100%", display: "flex", justifyContent: "flex-end",
-        padding: "12px 24px", borderTop: "1px solid var(--border-color)",
-      }}>
+      {/* Row 2 — Scroll to top icon right aligned below name */}
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "flex-end",
+          padding: "12px 24px",
+          borderTop: "1px solid var(--border-color)",
+        }}
+      >
         <button
           onClick={scrollToTop}
           title="Back to top"
           style={{
-            width: "36px", height: "36px",
+            width: "36px",
+            height: "36px",
             border: "1px solid var(--border-color)",
-            background: "transparent", color: "var(--text-color)",
-            cursor: "pointer", display: "flex", alignItems: "center",
-            justifyContent: "center", borderRadius: "4px",
-            opacity: 0.6, transition: "opacity 0.2s ease",
+            background: "transparent",
+            color: "var(--text-color)",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: "4px",
+            opacity: 0.6,
+            transition: "opacity 0.2s ease",
           }}
           onMouseEnter={e => e.currentTarget.style.opacity = "1"}
           onMouseLeave={e => e.currentTarget.style.opacity = "0.6"}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14" height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <polyline points="18 15 12 9 6 15" />
           </svg>
         </button>
       </div>
+
     </div>
   );
 }
