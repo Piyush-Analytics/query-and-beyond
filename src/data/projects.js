@@ -553,6 +553,32 @@ export const projects = [
     ],
   },
   {
+    id: "ipl-analytics-2024-2026",
+    title: "IPL Analytics 2024-2026 (PostgreSQL + Python + Power BI)",
+    description: "Full-stack IPL Analytics 2024-2026 — Python data generation, 40+ PostgreSQL queries covering batting, bowling & window functions, and 3-page Power BI dashboard with team, batting and bowling insights across 135 matches.",
+    image: "https://github.com/Piyush-Analytics/ipl-analytics-2024-2026/blob/main/ipl_page1_team.png?raw=true",
+    link: "https://github.com/Piyush-Analytics/ipl-analytics-2024-2026#-dashboard-preview",
+    tech: ["Power BI", "DAX", "PostgreSQL", "Python", "Data Visualization "],
+    details: [ 
+      {
+        heading: "Overview",
+        content: "An interactive Power BI dashboard that analyzes IPL 2024–2026 data to uncover team, player, and match performance insights."
+      },
+      {
+        heading: "Key Metrices",
+        content: "•Tracks total matches, runs, wickets, strike rates, win percentages, centuries, fifties, and season-wise performance indicators."
+      },
+      {
+       heading: "Features",
+       content: "• Provides dynamic filters, team comparisons, player rankings, performance trends, and interactive visualizations for data-driven cricket analysis."
+      },
+      {
+        heading: "Technologies Used",
+        content: "Power BI, DAX, Power Query, SQL"
+      }
+    ],
+  },
+  {
     id: "hospital-sql-analysis",
     title: "Hospital Data Analysis (SQL)",
     description: "30-Day SQL Micro Course project analyzing real-world hospital data using advanced SQL queries.",
